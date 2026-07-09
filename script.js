@@ -28,29 +28,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- Hamburger / mobile menu ---------- */
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
+ /* ---------- Hamburger / mobile menu ---------- */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuClose = document.getElementById('menuClose');
 
-  const closeMenu = () => {
+const closeMenu = () => {
     if (!hamburger || !mobileMenu) return;
+
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
+
     mobileMenu.classList.remove('active');
+
     document.body.style.overflow = '';
-  };
+};
 
-  if (hamburger && mobileMenu) {
+if (hamburger && mobileMenu) {
+
     hamburger.addEventListener('click', () => {
-      const isActive = hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      hamburger.setAttribute('aria-expanded', String(isActive));
-      document.body.style.overflow = isActive ? 'hidden' : '';
+
+        const isActive = hamburger.classList.toggle('active');
+
+        mobileMenu.classList.toggle('active');
+
+        hamburger.setAttribute('aria-expanded', isActive);
+
+        document.body.style.overflow = isActive ? 'hidden' : '';
+
     });
 
+    // Close button
+    if(menuClose){
+        menuClose.addEventListener('click', closeMenu);
+    }
+
+    // Close when clicking any menu item
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
+        link.addEventListener('click', closeMenu);
     });
-  }
+
+}
 
   /* ---------- Scroll reveal (bouncy pop-in) ---------- */
   const revealEls = document.querySelectorAll('.reveal');
