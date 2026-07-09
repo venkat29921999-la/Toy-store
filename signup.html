@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — Wonderly Toy Co.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<div class="grain"></div>
+
+<div class="auth-page">
+
+  <!-- ============ LEFT: BRAND VISUAL ============ -->
+  <div class="auth-visual">
+    <div class="hero-bg-shapes">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <i class="fa-solid fa-gift float-icon fi-1"></i>
+      <i class="fa-solid fa-teddy-bear float-icon fi-2"></i>
+      <i class="fa-solid fa-shapes float-icon fi-3"></i>
+      <i class="fa-solid fa-heart float-icon fi-4"></i>
+    </div>
+
+    <a href="index.html" class="logo av-logo">
+      <span class="logo-mark"><i class="fa-solid fa-shapes"></i></span>
+      <span class="logo-text">Wonderly</span>
+    </a>
+
+    <div class="av-copy">
+      <p class="eyebrow"><i class="fa-solid fa-sparkles"></i> Join the Playroom Club</p>
+      <h1>An account that<br>remembers your <span class="script-word">favorites</span>.</h1>
+      <p>Save wishlists, track repairs for life, and get early access to workshop drops before anyone else.</p>
+    </div>
+
+    <div class="av-perks">
+      <div><i class="fa-solid fa-circle-check"></i> Free repairs, tracked in one place</div>
+      <div><i class="fa-solid fa-circle-check"></i> Early access to limited drops</div>
+      <div><i class="fa-solid fa-circle-check"></i> One-tap reorders for gifting season</div>
+    </div>
+  </div>
+
+  <!-- ============ RIGHT: SIGNUP FORM ============ -->
+  <div class="auth-panel">
+    <a href="index.html" class="logo ap-logo-mobile">
+      <span class="logo-mark"><i class="fa-solid fa-shapes"></i></span>
+      <span class="logo-text">Wonderly</span>
+    </a>
+
+    <div class="auth-card reveal-auth">
+      <p class="eyebrow"><i class="fa-solid fa-user-plus"></i> Sign Up</p>
+      <h2>Create your account</h2>
+      <p class="auth-sub">Takes less than a minute &mdash; promise.</p>
+
+      <div class="role-toggle" id="signupRoleToggle">
+        <span class="role-pill" id="signupRolePill"></span>
+        <button type="button" class="role-opt active" data-role="user"><i class="fa-solid fa-user"></i> User</button>
+        <button type="button" class="role-opt" data-role="admin"><i class="fa-solid fa-user-shield"></i> Admin</button>
+      </div>
+
+      <form id="signupForm" novalidate>
+        <div class="field-group">
+          <label for="signupName">Full name</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="signupName" placeholder="Your name" required minlength="2">
+          </div>
+          <span class="field-error" id="signupNameError"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="signupEmail">Email address</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="signupEmail" placeholder="you@example.com" required>
+          </div>
+          <span class="field-error" id="signupEmailError"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="signupPassword">Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="signupPassword" placeholder="At least 6 characters" required minlength="6">
+            <button type="button" class="toggle-pass" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <div class="pw-strength" id="pwStrength">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="field-error" id="signupPasswordError"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="signupConfirm">Confirm password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="signupConfirm" placeholder="Re-enter your password" required minlength="6">
+            <button type="button" class="toggle-pass" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <span class="field-error" id="signupConfirmError"></span>
+        </div>
+
+        <label class="checkbox-wrap terms-check">
+          <input type="checkbox" id="agreeTerms" required>
+          <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+          I agree to the <a href="404.html" class="inline-link">Terms</a> &amp; <a href="#" class="inline-link">Privacy Policy</a>
+        </label>
+
+        <button type="submit" class="btn btn-primary auth-submit" id="signupSubmit">
+          <span class="btn-label">Create Account <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="btn-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+        </button>
+
+        <p class="auth-toast" id="signupToast"></p>
+      </form>
+
+      <div class="auth-divider"><span>or continue with</span></div>
+
+      <div class="social-row">
+        <button type="button" class="social-btn"><i class="fa-brands fa-google"></i> <a href="404.html">Google</a></button>
+        <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i> <a href="404.html">Apple</a></button>
+      </div>
+
+      <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

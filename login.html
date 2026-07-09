@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Wonderly Toy Co.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<div class="grain"></div>
+
+<div class="auth-page">
+
+  <!-- ============ LEFT: BRAND VISUAL ============ -->
+  <div class="auth-visual">
+    <div class="hero-bg-shapes">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <i class="fa-solid fa-star float-icon fi-1"></i>
+      <i class="fa-solid fa-puzzle-piece float-icon fi-2"></i>
+      <i class="fa-solid fa-kite float-icon fi-3"></i>
+      <i class="fa-solid fa-robot float-icon fi-4"></i>
+    </div>
+
+    <a href="index.html" class="logo av-logo">
+      <span class="logo-mark"><i class="fa-solid fa-shapes"></i></span>
+      <span class="logo-text">Wonderly</span>
+    </a>
+
+    <div class="av-copy">
+      <p class="eyebrow"><i class="fa-solid fa-sparkles"></i> Welcome Back</p>
+      <h1>Your playroom<br>account, <span class="script-word">reopened</span>.</h1>
+      <p>Track orders, manage repair requests, and pick up your saved wishlist &mdash; right where you left it.</p>
+    </div>
+
+    <div class="av-quote">
+      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p>"Signing in to reorder Wilbur the Bear for my niece took less time than wrapping it."</p>
+      <span>&mdash; Priya M., Chennai</span>
+    </div>
+  </div>
+
+  <!-- ============ RIGHT: LOGIN FORM ============ -->
+  <div class="auth-panel">
+    <a href="index.html" class="logo ap-logo-mobile">
+      <span class="logo-mark"><i class="fa-solid fa-shapes"></i></span>
+      <span class="logo-text">Wonderly</span>
+    </a>
+
+    <div class="auth-card reveal-auth">
+      <p class="eyebrow"><i class="fa-solid fa-right-to-bracket"></i> Log In</p>
+      <h2>Good to see you again</h2>
+      <p class="auth-sub">Enter your details to reach your dashboard.</p>
+
+      <div class="role-toggle" id="loginRoleToggle">
+        <span class="role-pill" id="loginRolePill"></span>
+        <button type="button" class="role-opt active" data-role="user"><i class="fa-solid fa-user"></i> User</button>
+        <button type="button" class="role-opt" data-role="admin"><i class="fa-solid fa-user-shield"></i> Admin</button>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="field-group">
+          <label for="loginEmail">Email address</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="loginEmail" placeholder="you@example.com" required>
+          </div>
+          <span class="field-error" id="loginEmailError"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required minlength="6">
+            <button type="button" class="toggle-pass" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <span class="field-error" id="loginPasswordError"></span>
+        </div>
+
+        <div class="field-row">
+          <label class="checkbox-wrap">
+            <input type="checkbox" id="rememberMe">
+            <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+            Remember me
+          </label>
+          <a href="404.html" class="inline-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary auth-submit" id="loginSubmit">
+          <span class="btn-label">Log In <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="btn-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+        </button>
+
+        <p class="auth-toast" id="loginToast"></p>
+      </form>
+
+      <div class="auth-divider"><span>or continue with</span></div>
+
+      <div class="social-row">
+        <button type="button" class="social-btn"><i class="fa-brands fa-google"></i> <a href="404.html">Google</a></button>
+        <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i> <a href="404.html">Apple</a></button>
+      </div>
+
+      <p class="auth-switch">New to Wonderly? <a href="signup.html">Create an account</a></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

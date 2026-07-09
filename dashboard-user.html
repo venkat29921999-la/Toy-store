@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account — Wonderly Toy Co.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-body">
+
+<div class="grain"></div>
+
+<div class="dash-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-shapes"></i></span>
+      <span class="logo-text">Stackly</span>
+    </a>
+
+    <span class="dash-role-tag user"><i class="fa-solid fa-user"></i> My Account</span>
+
+    <nav class="dash-nav">
+      <a href="#" class="dash-link active" data-view="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a href="#" class="dash-link" data-view="orders"><i class="fa-solid fa-bag-shopping"></i> My Orders</a>
+      <a href="#" class="dash-link" data-view="wishlist"><i class="fa-solid fa-heart"></i> Wishlist</a>
+      <a href="#" class="dash-link" data-view="repairs"><i class="fa-solid fa-screwdriver-wrench"></i> Repair Requests</a>
+      <a href="#" class="dash-link" data-view="addresses"><i class="fa-solid fa-location-dot"></i> Addresses</a>
+      <a href="#" class="dash-link" data-view="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+
+    <a href="login.html" class="dash-logout" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+  </aside>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <!-- ============ MAIN ============ -->
+  <div class="dash-main">
+
+    <!-- TOPBAR -->
+    <header class="dash-topbar">
+      <button class="hamburger dash-hamburger" id="dashHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search your orders...">
+      </div>
+
+      <div class="dash-topbar-actions">
+        <button class="icon-btn" aria-label="Notifications">
+         <a href="404.html"> <i class="fa-solid fa-bell"></i></a>
+          <span class="cart-count">2</span>
+        </button>
+        <div class="dash-profile">
+          <img src="Assest/toy14.webp" alt="User avatar" id="userAvatar">
+          <div class="dash-profile-info"><a href="404.html">
+            <strong id="userName">Priya M.</strong>
+            <span>Playroom Club</span></a>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="dash-content">
+
+      <!-- ================= VIEW: OVERVIEW ================= -->
+      <div class="dash-view active" id="view-overview">
+
+        <div class="welcome-banner reveal">
+          <div class="wb-copy">
+            <p class="eyebrow"><i class="fa-solid fa-sparkles"></i> Welcome back</p>
+            <h1>Hi <span id="userGreetName">Priya</span>, good to see you 👋</h1>
+            <p>Your Wilbur the Bear reorder is on its way &mdash; arriving Thursday.</p>
+            <a href="404.html" class="btn btn-primary"><span>Continue Shopping</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <img class="wb-img" src="Assest/toy2.webp" alt="Plush teddy bear">
+        </div>
+
+        <div class="dash-stats">
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-gold"><i class="fa-solid fa-bag-shopping"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="14" data-suffix="">0</span>
+              <p>Orders Placed</p>
+            </div>
+          </div>
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-coral"><i class="fa-solid fa-heart"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="7" data-suffix="">0</span>
+              <p>Wishlist Items</p>
+            </div>
+          </div>
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-lavender"><i class="fa-solid fa-star"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="1240" data-suffix="">0</span>
+              <p>Loyalty Points</p>
+            </div>
+          </div>
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-green"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="1" data-suffix="">0</span>
+              <p>Active Repair</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-grid-2">
+          <div class="dash-panel reveal">
+            <div class="dash-panel-head">
+              <h3>Order History</h3>
+              <a href="#" class="inline-link" data-view="orders">View all <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dash-table">
+              <div class="dt-row dt-head">
+                <span>Order</span><span>Item</span><span>Date</span><span>Status</span><span>Total</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-3021</span><span>Wilbur the Bear</span><span>Jul 6</span>
+                <span><span class="status-badge status-shipped">Shipped</span></span><span>$54</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-2988</span><span>ABC Stacking Cubes</span><span>Jun 21</span>
+                <span><span class="status-badge status-delivered">Delivered</span></span><span>$39</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-2951</span><span>Maple Rail Express</span><span>May 30</span>
+                <span><span class="status-badge status-delivered">Delivered</span></span><span>$88</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-2902</span><span>Storybook Trio</span><span>May 2</span>
+                <span><span class="status-badge status-delivered">Delivered</span></span><span>$28</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-panel reveal">
+            <div class="dash-panel-head"><h3>Repair Request</h3></div>
+            <div class="repair-status">
+              <div class="repair-item">
+                <img src="Assest/toy1.webp" alt="Maple Rail Express">
+                <div>
+                  <h4>Maple Rail Express</h4>
+                  <p>Loose wheel &mdash; mail-in repair</p>
+                </div>
+              </div>
+              <div class="repair-track">
+                <div class="rt-step done"><span class="rt-dot"><i class="fa-solid fa-check"></i></span><span>Received</span></div>
+                <div class="rt-line done"></div>
+                <div class="rt-step done"><span class="rt-dot"><i class="fa-solid fa-check"></i></span><span>In Repair</span></div>
+                <div class="rt-line"></div>
+                <div class="rt-step"><span class="rt-dot"><i class="fa-solid fa-truck"></i></span><span>Shipping Back</span></div>
+              </div>
+              <a href="404.html" class="inline-link" data-view="repairs">Track full details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-panel-head">
+            <h3>Recommended for You</h3>
+            <a href="shop.html" class="inline-link">Shop all <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="rec-grid">
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy4.webp" alt="Prism Block Set">
+              <div><h5>Prism Block Set</h5><span>$72</span></div>
+            </a>
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy22.webp" alt="Storybook Trio Figurines">
+              <div><h5>Storybook Trio</h5><span>$28</span></div>
+            </a>
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy6.webp" alt="Tin-Tone Wind-Up Robot">
+              <div><h5>Wind-Up Robot</h5><span>$46</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: MY ORDERS ================= -->
+      <div class="dash-view" id="view-orders">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-bag-shopping"></i> My Orders</p>
+            <h1>Every order, in one place</h1>
+          </div>
+        </div>
+
+        <div class="filter-bar reveal" style="justify-content:flex-start;margin-bottom:22px;">
+          <button class="filter-btn active" data-filter="all">All Orders</button>
+          <button class="filter-btn" data-filter="processing">Processing</button>
+          <button class="filter-btn" data-filter="shipped">Shipped</button>
+          <button class="filter-btn" data-filter="delivered">Delivered</button>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-table">
+            <div class="dt-row dt-row-6 dt-head">
+              <span>Order</span><span>Item</span><span>Date</span><span>Status</span><span>Total</span><span>Action</span>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="shipped">
+              <span class="dt-id">#WN-3021</span><span>Wilbur the Bear</span><span>Jul 6</span>
+              <span><span class="status-badge status-shipped">Shipped</span></span><span>$54</span>
+              <a href="404.html" class="dt-action">Track <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="processing">
+              <span class="dt-id">#WN-3015</span><span>Rally Roadster Trike</span><span>Jul 2</span>
+              <span><span class="status-badge status-processing">Processing</span></span><span>$96</span>
+              <a href="404.html" class="dt-action">Track <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="delivered">
+              <span class="dt-id">#WN-2988</span><span>ABC Stacking Cubes</span><span>Jun 21</span>
+              <span><span class="status-badge status-delivered">Delivered</span></span><span>$39</span>
+              <a href="404.html" class="dt-action">Reorder <i class="fa-solid fa-rotate-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="delivered">
+              <span class="dt-id">#WN-2951</span><span>Maple Rail Express</span><span>May 30</span>
+              <span><span class="status-badge status-delivered">Delivered</span></span><span>$88</span>
+              <a href="404.html" class="dt-action">Reorder <i class="fa-solid fa-rotate-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="delivered">
+              <span class="dt-id">#WN-2902</span><span>Storybook Trio</span><span>May 2</span>
+              <span><span class="status-badge status-delivered">Delivered</span></span><span>$28</span>
+              <a href="404.html" class="dt-action">Reorder <i class="fa-solid fa-rotate-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="delivered">
+              <span class="dt-id">#WN-2840</span><span>Little Picasso Craft Box</span><span>Apr 14</span>
+              <span><span class="status-badge status-delivered">Delivered</span></span><span>$34</span>
+              <a href="404.html" class="dt-action">Reorder <i class="fa-solid fa-rotate-right"></i></a>
+            </div>
+          </div>
+          <p class="no-results">No orders match that filter yet &mdash; try "All Orders".</p>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: WISHLIST ================= -->
+      <div class="dash-view" id="view-wishlist">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-heart"></i> Wishlist</p>
+            <h1>Saved for later</h1>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="rec-grid" style="grid-template-columns:repeat(3,1fr);">
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy21.webp" alt="ABC Stacking Cubes">
+              <div><h5>ABC Stacking Cubes</h5><span>$39</span></div>
+            </a>
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy17.webp" alt="Little Picasso Craft Box">
+              <div><h5>Craft Box</h5><span>$34</span></div>
+            </a>
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy19.webp" alt="Marching Band Drum Set">
+              <div><h5>Drum Set</h5><span>$42</span></div>
+            </a>
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy37.webp" alt="Board Game Set">
+              <div><h5>Board Game Set</h5><span>$45</span></div>
+            </a>
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy18.webp" alt="Rally Roadster Trike">
+              <div><h5>Roadster Trike</h5><span>$96</span></div>
+            </a>
+            <a href="404.html" class="rec-card">
+              <img src="Assest/toy36.webp" alt="Plush bundle">
+              <div><h5>Plush Bundle</h5><span>$64</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: REPAIR REQUESTS ================= -->
+      <div class="dash-view" id="view-repairs">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-screwdriver-wrench"></i> Repair Requests</p>
+            <h1>Mended, not replaced</h1>
+          </div>
+          <a href="404.html" class="btn btn-primary"><i class="fa-solid fa-plus"></i><span>New Repair Request</span></a>
+        </div>
+
+        <div class="dash-panel reveal" style="margin-bottom:22px;">
+          <div class="dash-panel-head"><h3>In Progress</h3></div>
+          <div class="repair-status">
+            <div class="repair-item">
+              <img src="Assest/toy1.webp" alt="Maple Rail Express">
+              <div>
+                <h4>Maple Rail Express</h4>
+                <p>Loose wheel &mdash; mail-in repair &middot; #RP-114</p>
+              </div>
+            </div>
+            <div class="repair-track">
+              <div class="rt-step done"><span class="rt-dot"><i class="fa-solid fa-check"></i></span><span>Received</span></div>
+              <div class="rt-line done"></div>
+              <div class="rt-step done"><span class="rt-dot"><i class="fa-solid fa-check"></i></span><span>In Repair</span></div>
+              <div class="rt-line"></div>
+              <div class="rt-step"><span class="rt-dot"><i class="fa-solid fa-truck"></i></span><span>Shipping Back</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-panel-head"><h3>Past Requests</h3></div>
+          <div class="dash-table">
+            <div class="dt-row dt-head">
+              <span>Request</span><span>Item</span><span>Issue</span><span>Status</span><span>Closed</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-id">#RP-098</span><span>Wilbur the Bear</span><span>Seam repair</span>
+              <span><span class="status-badge status-delivered">Completed</span></span><span>Mar 12</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-id">#RP-071</span><span>Prism Block Set</span><span>Missing piece</span>
+              <span><span class="status-badge status-delivered">Completed</span></span><span>Jan 4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: ADDRESSES ================= -->
+      <div class="dash-view" id="view-addresses">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-location-dot"></i> Addresses</p>
+            <h1>Where we send the good stuff</h1>
+          </div>
+        </div>
+
+        <div class="address-grid">
+          <div class="address-card reveal">
+            <div class="address-card-head">
+              <span class="address-tag"><i class="fa-solid fa-house"></i> Home</span>
+            </div>
+            <p>Priya Menon<br>14 Marigold Lane, Nungambakkam<br>Chennai, Tamil Nadu 600034<br>+91 98765 43210</p>
+            <div class="address-actions">
+              <a href="404.html"><button><i class="fa-solid fa-pen"></i> Edit</button></a>
+              <a href="404.html"><button class="danger"><i class="fa-solid fa-trash"></i> Remove</button></a>
+            </div>
+          </div>
+          <div class="address-card reveal">
+            <div class="address-card-head">
+              <span class="address-tag"><i class="fa-solid fa-briefcase"></i> Work</span>
+            </div>
+            <p>Priya Menon<br>22 Church Street, Indiranagar<br>Bengaluru, Karnataka 560038<br>+91 98450 11223</p>
+            <div class="address-actions">
+             <a href="404.html"><button><i class="fa-solid fa-pen"></i> Edit</button></a>
+             <a href="404.html"><button class="danger"><i class="fa-solid fa-trash"></i> Remove</button></a>
+            </div>
+          </div>
+          <a href="404.html"><button class="address-add-card reveal">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>Add New Address</span>
+          </button></a>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: SETTINGS ================= -->
+      <div class="dash-view" id="view-settings">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-gear"></i> Settings</p>
+            <h1>Your account, your rules</h1>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal" style="max-width:640px;margin-bottom:22px;">
+          <div class="dash-panel-head"><h3>Profile</h3></div>
+          <form class="visit-form" onsubmit="return false;">
+            <div class="visit-form-row">
+              <input type="text" value="Priya Menon" placeholder="Full name">
+              <input type="email" value="priya.menon@example.com" placeholder="Email">
+            </div>
+            <input type="tel" value="+91 98765 43210" placeholder="Phone number">
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start;"><span><a href="404.html">Save Changes</a></span><i class="fa-solid fa-check"></i></button>
+          </form>
+        </div>
+
+        <div class="dash-panel reveal" style="max-width:640px;">
+          <div class="dash-panel-head"><h3>Notifications</h3></div>
+          <div class="toggle-row">
+            <div><strong>Order Updates</strong><span>Shipping and delivery status changes</span></div>
+            <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div><strong>Repair Status</strong><span>Progress on active repair requests</span></div>
+            <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div><strong>New Arrivals</strong><span>Be first to know about new toys</span></div>
+            <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div><strong>Playroom Club Emails</strong><span>Offers, workshops, and events</span></div>
+            <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

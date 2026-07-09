@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Wonderly Toy Co.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-body">
+
+<div class="grain"></div>
+
+<div class="dash-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-shapes"></i></span>
+      <span class="logo-text">Stackly</span>
+    </a>
+
+    <span class="dash-role-tag admin"><i class="fa-solid fa-user-shield"></i> Admin Panel</span>
+
+    <nav class="dash-nav">
+      <a href="#" class="dash-link active" data-view="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a href="#" class="dash-link" data-view="orders"><i class="fa-solid fa-receipt"></i> Orders</a>
+      <a href="#" class="dash-link" data-view="products"><i class="fa-solid fa-box-open"></i> Products</a>
+      <a href="#" class="dash-link" data-view="customers"><i class="fa-solid fa-users"></i> Customers</a>
+      <a href="#" class="dash-link" data-view="workshops"><i class="fa-solid fa-people-group"></i> Workshops</a>
+      <a href="#" class="dash-link" data-view="repairs"><i class="fa-solid fa-screwdriver-wrench"></i> Repairs</a>
+      <a href="#" class="dash-link" data-view="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+      <a href="#" class="dash-link" data-view="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+
+    <a href="login.html" class="dash-logout" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+  </aside>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <!-- ============ MAIN ============ -->
+  <div class="dash-main">
+
+    <!-- TOPBAR -->
+    <header class="dash-topbar">
+      <button class="hamburger dash-hamburger" id="dashHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search orders, products, customers...">
+      </div>
+
+      <div class="dash-topbar-actions">
+        <a href="404.html"><button class="icon-btn" aria-label="Notifications">
+          <i class="fa-solid fa-bell"></i>
+          <span class="cart-count">5</span>
+        </button></a>
+        <div class="dash-profile">
+          <img src="Assest/toy30.webp" alt="Admin avatar" id="adminAvatar">
+          <a href="404.html"><div class="dash-profile-info">
+            <strong id="adminName">Rohan Mehta</strong>
+            <span>Administrator</span>
+          </div></a>
+         <a href="404.html"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="dash-content">
+
+      <!-- ================= VIEW: OVERVIEW ================= -->
+      <div class="dash-view active" id="view-overview">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-gauge-high"></i> Overview</p>
+            <h1>Good morning, <span id="adminGreetName">Rohan</span> 👋</h1>
+          </div>
+          <a href="#" class="btn btn-primary" data-view="products"><i class="fa-solid fa-plus"></i><span>Add Product</span></a>
+        </div>
+
+        <div class="dash-stats">
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-gold"><i class="fa-solid fa-sack-dollar"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="284600" data-prefix="$" data-suffix="">0</span>
+              <p>Revenue This Month</p>
+            </div>
+            <span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 12.4%</span>
+          </div>
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-coral"><i class="fa-solid fa-receipt"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="342" data-suffix="">0</span>
+              <p>Orders Today</p>
+            </div>
+            <span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 6.1%</span>
+          </div>
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-lavender"><i class="fa-solid fa-users"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="12480" data-suffix="+">0</span>
+              <p>Active Customers</p>
+            </div>
+            <span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 3.8%</span>
+          </div>
+          <div class="dash-stat-card reveal">
+            <span class="dsc-icon dsc-green"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <div class="dsc-info">
+              <span class="dsc-num" data-target="27" data-suffix="">0</span>
+              <p>Pending Repairs</p>
+            </div>
+            <span class="dsc-trend down"><i class="fa-solid fa-arrow-trend-down"></i> 4.2%</span>
+          </div>
+        </div>
+
+        <div class="dash-grid-2">
+          <div class="dash-panel reveal">
+            <div class="dash-panel-head">
+              <h3>Recent Orders</h3>
+              <a href="#" class="inline-link" data-view="orders">View all <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dash-table">
+              <div class="dt-row dt-head">
+                <span>Order</span><span>Customer</span><span>Item</span><span>Status</span><span>Total</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-3021</span><span>Priya M.</span><span>Wilbur the Bear</span>
+                <span><span class="status-badge status-shipped">Shipped</span></span><span>$54</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-3020</span><span>Daniel R.</span><span>Maple Rail Express</span>
+                <span><span class="status-badge status-processing">Processing</span></span><span>$88</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-3019</span><span>Anjali K.</span><span>ABC Stacking Cubes</span>
+                <span><span class="status-badge status-delivered">Delivered</span></span><span>$39</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-3018</span><span>Marcus T.</span><span>Prism Block Set</span>
+                <span><span class="status-badge status-processing">Processing</span></span><span>$72</span>
+              </div>
+              <div class="dt-row">
+                <span class="dt-id">#WN-3017</span><span>Elena V.</span><span>Storybook Trio</span>
+                <span><span class="status-badge status-delayed">Delayed</span></span><span>$28</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-panel reveal">
+            <div class="dash-panel-head">
+              <h3>Top Products</h3>
+              <a href="#" class="inline-link" data-view="analytics">Full ranking <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="top-product-list">
+              <div class="tp-row">
+                <span class="tp-name">Wilbur the Bear</span>
+                <div class="tp-bar"><div class="tp-fill" data-width="92"></div></div>
+                <span class="tp-pct">92%</span>
+              </div>
+              <div class="tp-row">
+                <span class="tp-name">ABC Stacking Cubes</span>
+                <div class="tp-bar"><div class="tp-fill" data-width="78"></div></div>
+                <span class="tp-pct">78%</span>
+              </div>
+              <div class="tp-row">
+                <span class="tp-name">Storybook Trio</span>
+                <div class="tp-bar"><div class="tp-fill" data-width="68"></div></div>
+                <span class="tp-pct">68%</span>
+              </div>
+              <div class="tp-row">
+                <span class="tp-name">Maple Rail Express</span>
+                <div class="tp-bar"><div class="tp-fill" data-width="61"></div></div>
+                <span class="tp-pct">61%</span>
+              </div>
+              <div class="tp-row">
+                <span class="tp-name">Prism Block Set</span>
+                <div class="tp-bar"><div class="tp-fill" data-width="54"></div></div>
+                <span class="tp-pct">54%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-panel-head"><h3>Quick Actions</h3></div>
+          <div class="quick-actions">
+            <a href="#" class="qa-card" data-view="products"><i class="fa-solid fa-box-open"></i><span>Add New Product</span></a>
+            <a href="#" class="qa-card"><i class="fa-solid fa-tags"></i><span>Create a Promotion</span></a>
+            <a href="#" class="qa-card" data-view="orders"><i class="fa-solid fa-truck-fast"></i><span>Review Shipments</span></a>
+            <a href="#" class="qa-card"><i class="fa-solid fa-comments"></i><span>Respond to Reviews</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: ORDERS ================= -->
+      <div class="dash-view" id="view-orders">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-receipt"></i> Orders</p>
+            <h1>Every order, live</h1>
+          </div>
+        </div>
+
+        <div class="filter-bar reveal" style="justify-content:flex-start;margin-bottom:22px;">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="processing">Processing</button>
+          <button class="filter-btn" data-filter="shipped">Shipped</button>
+          <button class="filter-btn" data-filter="delivered">Delivered</button>
+          <button class="filter-btn" data-filter="delayed">Delayed</button>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-table">
+            <div class="dt-row dt-row-6 dt-head">
+              <span>Order</span><span>Customer</span><span>Item</span><span>Status</span><span>Total</span><span>Action</span>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="shipped">
+              <span class="dt-id">#WN-3021</span><span>Priya M.</span><span>Wilbur the Bear</span>
+              <span><span class="status-badge status-shipped">Shipped</span></span><span>$54</span>
+              <a href="#" class="dt-action">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="processing">
+              <span class="dt-id">#WN-3020</span><span>Daniel R.</span><span>Maple Rail Express</span>
+              <span><span class="status-badge status-processing">Processing</span></span><span>$88</span>
+              <a href="#" class="dt-action">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="delivered">
+              <span class="dt-id">#WN-3019</span><span>Anjali K.</span><span>ABC Stacking Cubes</span>
+              <span><span class="status-badge status-delivered">Delivered</span></span><span>$39</span>
+              <a href="#" class="dt-action">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="processing">
+              <span class="dt-id">#WN-3018</span><span>Marcus T.</span><span>Prism Block Set</span>
+              <span><span class="status-badge status-processing">Processing</span></span><span>$72</span>
+              <a href="#" class="dt-action">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="delayed">
+              <span class="dt-id">#WN-3017</span><span>Elena V.</span><span>Storybook Trio</span>
+              <span><span class="status-badge status-delayed">Delayed</span></span><span>$28</span>
+              <a href="#" class="dt-action">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="delivered">
+              <span class="dt-id">#WN-3016</span><span>Sofia L.</span><span>Rally Roadster Trike</span>
+              <span><span class="status-badge status-delivered">Delivered</span></span><span>$96</span>
+              <a href="#" class="dt-action">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dt-row dt-row-6" data-tags="shipped">
+              <span class="dt-id">#WN-3015</span><span>James K.</span><span>Little Picasso Craft Box</span>
+              <span><span class="status-badge status-shipped">Shipped</span></span><span>$34</span>
+              <a href="#" class="dt-action">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <p class="no-results">No orders match that filter yet &mdash; try "All".</p>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: PRODUCTS ================= -->
+      <div class="dash-view" id="view-products">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-box-open"></i> Products</p>
+            <h1>What's on the shelf</h1>
+          </div>
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-plus"></i><span>Add Product</span></a>
+        </div>
+
+        <div class="padmin-grid">
+          <div class="padmin-card reveal">
+            <div class="padmin-media">
+              <img src="Assest/toy2.webp" alt="Wilbur the Bear">
+              <span class="stock-badge stock-in">In Stock &middot; 214</span>
+            </div>
+            <div class="padmin-info">
+              <h5>Wilbur the Bear</h5>
+              <p style="color:var(--lavender);font-size:.78rem;">Plush &amp; Cuddles</p>
+              <div class="padmin-bottom"><span>$54</span><a href="#" class="padmin-edit"><i class="fa-solid fa-pen"></i> Edit</a></div>
+            </div>
+          </div>
+          <div class="padmin-card reveal">
+            <div class="padmin-media">
+              <img src="Assest/toy5.webp" alt="ABC Stacking Cubes">
+              <span class="stock-badge stock-in">In Stock &middot; 168</span>
+            </div>
+            <div class="padmin-info">
+              <h5>ABC Stacking Cubes</h5>
+              <p style="color:var(--lavender);font-size:.78rem;">Learn &amp; Discover</p>
+              <div class="padmin-bottom"><span>$39</span><a href="#" class="padmin-edit"><i class="fa-solid fa-pen"></i> Edit</a></div>
+            </div>
+          </div>
+          <div class="padmin-card reveal">
+            <div class="padmin-media">
+              <img src="Assest/toy1.webp" alt="Maple Rail Express">
+              <span class="stock-badge stock-low">Low Stock &middot; 12</span>
+            </div>
+            <div class="padmin-info">
+              <h5>Maple Rail Express</h5>
+              <p style="color:var(--lavender);font-size:.78rem;">Build &amp; Stack</p>
+              <div class="padmin-bottom"><span>$88</span><a href="#" class="padmin-edit"><i class="fa-solid fa-pen"></i> Edit</a></div>
+            </div>
+          </div>
+          <div class="padmin-card reveal">
+            <div class="padmin-media">
+              <img src="Assest/toy7.webp" alt="Storybook Trio">
+              <span class="stock-badge stock-in">In Stock &middot; 96</span>
+            </div>
+            <div class="padmin-info">
+              <h5>Storybook Trio</h5>
+              <p style="color:var(--lavender);font-size:.78rem;">Characters</p>
+              <div class="padmin-bottom"><span>$28</span><a href="#" class="padmin-edit"><i class="fa-solid fa-pen"></i> Edit</a></div>
+            </div>
+          </div>
+          <div class="padmin-card reveal">
+            <div class="padmin-media">
+              <img src="Assest/toy4.webp" alt="Prism Block Set">
+              <span class="stock-badge stock-out">Out of Stock</span>
+            </div>
+            <div class="padmin-info">
+              <h5>Prism Block Set</h5>
+              <p style="color:var(--lavender);font-size:.78rem;">Build &amp; Stack</p>
+              <div class="padmin-bottom"><span>$72</span><a href="#" class="padmin-edit"><i class="fa-solid fa-pen"></i> Edit</a></div>
+            </div>
+          </div>
+          <div class="padmin-card reveal">
+            <div class="padmin-media">
+              <img src="Assest/toy18.webp" alt="Rally Roadster Trike">
+              <span class="stock-badge stock-low">Low Stock &middot; 8</span>
+            </div>
+            <div class="padmin-info">
+              <h5>Rally Roadster Trike</h5>
+              <p style="color:var(--lavender);font-size:.78rem;">Vehicles &amp; Wheels</p>
+              <div class="padmin-bottom"><span>$96</span><a href="#" class="padmin-edit"><i class="fa-solid fa-pen"></i> Edit</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: CUSTOMERS ================= -->
+      <div class="dash-view" id="view-customers">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-users"></i> Customers</p>
+            <h1>12,480+ playroom families</h1>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-table">
+            <div class="dt-row dt-head">
+              <span>Customer</span><span>Location</span><span>Orders</span><span>Spent</span><span>Member Since</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-customer"><img src="Assest/toy14.webp" alt="Priya M.">Priya M.</span>
+              <span>Chennai</span><span>14</span><span>$742</span><span>2023</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-customer"><img src="Assest/toy15.webp" alt="Daniel R.">Daniel R.</span>
+              <span>Austin</span><span>9</span><span>$518</span><span>2024</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-customer"><img src="Assest/toy16.webp" alt="Anjali K.">Anjali K.</span>
+              <span>Bengaluru</span><span>21</span><span>$1,180</span><span>2022</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-customer"><img src="Assest/toy43.webp" alt="Marcus T.">Marcus T.</span>
+              <span>Mumbai</span><span>6</span><span>$294</span><span>2024</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-customer"><img src="Assest/tiy44.webp" alt="Elena V.">Elena V.</span>
+              <span>Bengaluru</span><span>17</span><span>$960</span><span>2023</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-customer"><img src="Assest/toy45.webp" alt="Sofia L.">Sofia L.</span>
+              <span>Chennai</span><span>4</span><span>$210</span><span>2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: WORKSHOPS ================= -->
+      <div class="dash-view" id="view-workshops">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-people-group"></i> Workshops</p>
+            <h1>180+ artisan partners</h1>
+          </div>
+        </div>
+
+        <div class="maker-grid">
+          <div class="maker-card reveal">
+            <div class="maker-photo">
+              <img src="Assest/toy28.webp" alt="Elias Novak">
+              <span class="maker-years">22 yrs</span>
+            </div>
+            <div class="maker-info">
+              <h4>Elias Novak</h4>
+              <p class="maker-role">Master Carpenter &middot; Tallinn Workshop</p>
+              <p class="maker-quote">Active &middot; 34 SKUs in production this quarter.</p>
+            </div>
+          </div>
+          <div class="maker-card reveal">
+            <div class="maker-photo">
+              <img src="Assest/toy29.webp" alt="Maren Solberg">
+              <span class="maker-years">15 yrs</span>
+            </div>
+            <div class="maker-info">
+              <h4>Maren Solberg</h4>
+              <p class="maker-role">Finishing Lead &middot; Bergen Workshop</p>
+              <p class="maker-quote">Active &middot; 21 SKUs in production this quarter.</p>
+            </div>
+          </div>
+          <div class="maker-card reveal">
+            <div class="maker-photo">
+              <img src="Assest/toy30.webp" alt="Rohan Mehta">
+              <span class="maker-years">9 yrs</span>
+            </div>
+            <div class="maker-info">
+              <h4>Rohan Mehta</h4>
+              <p class="maker-role">Safety Inspector &middot; Chennai Workshop</p>
+              <p class="maker-quote">Active &middot; Oversees final QA for all shipments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: REPAIRS ================= -->
+      <div class="dash-view" id="view-repairs">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-screwdriver-wrench"></i> Repairs</p>
+            <h1>27 requests in the queue</h1>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-table">
+            <div class="dt-row dt-head">
+              <span>Request</span><span>Customer</span><span>Item</span><span>Issue</span><span>Status</span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-id">#RP-114</span><span>Priya M.</span><span>Maple Rail Express</span><span>Loose wheel</span>
+              <span><span class="status-badge status-processing">In Repair</span></span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-id">#RP-113</span><span>James K.</span><span>Wilbur the Bear</span><span>Seam repair</span>
+              <span><span class="status-badge status-shipped">Shipping Back</span></span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-id">#RP-112</span><span>Sofia L.</span><span>Prism Block Set</span><span>Missing piece</span>
+              <span><span class="status-badge status-delayed">Awaiting Parts</span></span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-id">#RP-111</span><span>Elena V.</span><span>Rally Roadster Trike</span><span>Wheel alignment</span>
+              <span><span class="status-badge status-processing">In Repair</span></span>
+            </div>
+            <div class="dt-row">
+              <span class="dt-id">#RP-110</span><span>Marcus T.</span><span>Storybook Trio</span><span>Repaint request</span>
+              <span><span class="status-badge status-delivered">Completed</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: ANALYTICS ================= -->
+      <div class="dash-view" id="view-analytics">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-chart-line"></i> Analytics</p>
+            <h1>The shelf, by the numbers</h1>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal" style="margin-bottom:22px;">
+          <div class="dash-panel-head"><h3>Revenue, Last 6 Months</h3></div>
+          <div class="bar-chart">
+            <div class="bar-chart-col"><div class="bar-chart-track"><div class="chart-bar" data-height="58"></div></div><span>Feb</span></div>
+            <div class="bar-chart-col"><div class="bar-chart-track"><div class="chart-bar" data-height="64"></div></div><span>Mar</span></div>
+            <div class="bar-chart-col"><div class="bar-chart-track"><div class="chart-bar" data-height="71"></div></div><span>Apr</span></div>
+            <div class="bar-chart-col"><div class="bar-chart-track"><div class="chart-bar" data-height="66"></div></div><span>May</span></div>
+            <div class="bar-chart-col"><div class="bar-chart-track"><div class="chart-bar" data-height="83"></div></div><span>Jun</span></div>
+            <div class="bar-chart-col"><div class="bar-chart-track"><div class="chart-bar" data-height="100"></div></div><span>Jul</span></div>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal">
+          <div class="dash-panel-head"><h3>Sales by Category</h3></div>
+          <div class="ring-row">
+            <div class="ring-col">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                <circle class="ring-fill" data-pct="38" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <span class="ring-label"><strong class="ring-num" data-count="38">0</strong><em>%</em></span>
+              <p>Plush &amp; Cuddles</p>
+            </div>
+            <div class="ring-col">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                <circle class="ring-fill" data-pct="27" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <span class="ring-label"><strong class="ring-num" data-count="27">0</strong><em>%</em></span>
+              <p>Build &amp; Stack</p>
+            </div>
+            <div class="ring-col">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                <circle class="ring-fill" data-pct="19" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <span class="ring-label"><strong class="ring-num" data-count="19">0</strong><em>%</em></span>
+              <p>Characters</p>
+            </div>
+            <div class="ring-col">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                <circle class="ring-fill" data-pct="16" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <span class="ring-label"><strong class="ring-num" data-count="16">0</strong><em>%</em></span>
+              <p>Everything Else</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW: SETTINGS ================= -->
+      <div class="dash-view" id="view-settings">
+        <div class="dash-heading reveal">
+          <div>
+            <p class="eyebrow"><i class="fa-solid fa-gear"></i> Settings</p>
+            <h1>Store configuration</h1>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal" style="max-width:640px;margin-bottom:22px;">
+          <div class="dash-panel-head"><h3>Store Details</h3></div>
+          <form class="visit-form" onsubmit="return false;">
+            <div class="visit-form-row">
+              <input type="text" value="Wonderly Toy Co." placeholder="Store name">
+              <input type="email" value="hello@wonderlytoys.com" placeholder="Contact email">
+            </div>
+            <div class="visit-form-row">
+              <select><option>USD ($)</option><option>INR (₹)</option><option>EUR (€)</option></select>
+              <select><option>Asia/Kolkata (IST)</option><option>America/New_York (EST)</option></select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start;"><span>Save Changes</span><i class="fa-solid fa-check"></i></button>
+          </form>
+        </div>
+
+        <div class="dash-panel reveal" style="max-width:640px;">
+          <div class="dash-panel-head"><h3>Admin Notifications</h3></div>
+          <div class="toggle-row">
+            <div><strong>New Orders</strong><span>Instant alert on every new order</span></div>
+            <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div><strong>Low Stock Alerts</strong><span>When a product drops below 15 units</span></div>
+            <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div><strong>New Repair Requests</strong><span>Customer-submitted repair tickets</span></div>
+            <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div><strong>Weekly Summary Email</strong><span>Revenue &amp; performance digest</span></div>
+            <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
