@@ -132,10 +132,23 @@ section{padding:120px 8vw;position:relative;}
 .nav-inner .nav-links{justify-self:center;}
 .nav-inner .nav-icons{justify-self:end;}
 .logo{display:flex;align-items:center;gap:10px;}
+
+
+/* Header Logo */
 .nav-inner > a img{
     height:70px;
     width:auto;
     display:block;
+    object-fit:contain;
+
+    filter: brightness(0)
+            saturate(100%)
+            invert(84%)
+            sepia(39%)
+            saturate(650%)
+            hue-rotate(355deg)
+            brightness(104%)
+            contrast(96%);
 }
 .logo-mark{
   width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
@@ -547,12 +560,21 @@ section{padding:120px 8vw;position:relative;}
   max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:50px;
   padding-bottom:50px;border-bottom:1px solid var(--line);
 }
+/* Footer Logo */
 .footer-brand img{
-    height:70px;      /* Same size as header */
+    height:70px;
     width:auto;
     display:block;
     object-fit:contain;
-    margin-bottom:20px;
+
+    filter: brightness(0)
+            saturate(100%)
+            invert(84%)
+            sepia(39%)
+            saturate(650%)
+            hue-rotate(355deg)
+            brightness(104%)
+            contrast(96%);
 }
 .footer-brand p{color:var(--lavender);font-size:.9rem;margin:18px 0 22px;max-width:280px;}
 .footer-social{display:flex;gap:14px;}
