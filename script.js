@@ -1,5 +1,5 @@
 // ==========================================================
-// WONDERLY — Premium Toy Store interactions
+// Stackly — Premium Toy Store interactions
 // ==========================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -417,8 +417,8 @@ if (hamburger && mobileMenu) {
       showToast(toast, 'Welcome back! Redirecting…', false);
       runFakeSubmit(submitBtn, () => {
         try {
-          localStorage.setItem('wonderlyRole', role);
-          localStorage.setItem('wonderlyName', name);
+          localStorage.setItem('StacklyRole', role);
+          localStorage.setItem('StacklyName', name);
         } catch (err) { /* storage unavailable, continue anyway */ }
         window.location.href = role === 'admin' ? 'dashboard-admin.html' : 'dashboard-user.html';
       });
@@ -488,8 +488,8 @@ if (hamburger && mobileMenu) {
       showToast(toast, 'Account created! Redirecting to log in…', false);
       runFakeSubmit(submitBtn, () => {
         try {
-          localStorage.setItem('wonderlyRole', role);
-          localStorage.setItem('wonderlyName', nameInput.value.trim().split(' ')[0]);
+          localStorage.setItem('StacklyRole', role);
+          localStorage.setItem('StacklyName', nameInput.value.trim().split(' ')[0]);
         } catch (err) { /* storage unavailable, continue anyway */ }
         window.location.href = 'login.html';
       });
@@ -526,7 +526,7 @@ if (hamburger && mobileMenu) {
 
   /* ---------- Populate name/role from localStorage ---------- */
   try {
-    const savedName = localStorage.getItem('wonderlyName');
+    const savedName = localStorage.getItem('StacklyName');
     if (savedName) {
       document.querySelectorAll('#adminGreetName, #userGreetName').forEach(el => { el.textContent = savedName; });
       document.querySelectorAll('#adminName, #userName').forEach(el => { el.textContent = savedName; });
@@ -537,8 +537,8 @@ if (hamburger && mobileMenu) {
   document.querySelectorAll('#logoutBtn').forEach(btn => {
     btn.addEventListener('click', () => {
       try {
-        localStorage.removeItem('wonderlyRole');
-        localStorage.removeItem('wonderlyName');
+        localStorage.removeItem('StacklyRole');
+        localStorage.removeItem('StacklyName');
       } catch (err) { /* storage unavailable */ }
     });
   });

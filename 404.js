@@ -1,5 +1,5 @@
 // ==========================================================
-// WONDERLY — 404 Page interactions
+// Stackly — 404 Page interactions
 // ==========================================================
 
 document.addEventListener('DOMContentLoaded', () => {
